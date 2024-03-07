@@ -243,9 +243,14 @@ body{
     width: 10%;
 }
 
-.footer__navegador ul li img{
+.footer__navegador ul li a{
     width: 100%;
+    color: var(--color-font);
+    font-size: 7vw;
 }
 
+.footer__navegador ul li a:hover{
+    color: var(--color-secundary);
+}
 
 
