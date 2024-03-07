@@ -1,0 +1,75 @@
+@import url(menuvariables.css);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    gap: 0;
+}
+
+body{
+    position: relative;
+    background-color: var(--color-primary);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr repeat(3, 5fr) 1.5fr;
+    grid-template-areas: 
+    "header"
+    "sup"
+    "med"
+    "med"
+    "footer"
+    ;
+}
+
+header{
+    grid-area: header;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+header img{
+    width: 100%;
+}
+
+.secarriba{
+    grid-area: sup;
+    width: 100%;
+}
+
+.secarriba > p{
+    font-size: 6vw;
+    font-weight: 900;
+}
+
+.secarriba__pig{
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+}
+
+.nack{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39vw;
+    height: 39vw;
+    background-color: var(--color-pig);
+    border-radius: 0 60% 50% 0;
+}
+
+.pig__izquierda{
+    width: 40%;
+    border: 1px solid green;
+    overflow: hidden;
+}
+
+.pig__izquierda img{
+    width: 80%;
+    
+}
+
