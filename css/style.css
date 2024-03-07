@@ -147,6 +147,7 @@ body{
 }
 
 .sect__med__columns div{
+    width: 33%;
     margin: 3vw 4.6vw;
     margin-top: 1.5vw;
     padding: 8vw 1vw;
@@ -164,7 +165,7 @@ body{
     color: var(--color-primary);
     padding-left: 4.8vw;
     padding-right: 4vw ;
-    z-index: 1;
+    z-index: 0;
 }
 
 .sect__baj > p{
@@ -217,21 +218,34 @@ body{
 
 .footer{
     grid-area: footer;
-    padding: 2vw 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
+    position: sticky;
+    bottom: 0;
+    background-color: var(--color-primary);
+    z-index: 2;
 }
 
+.footer__navegador{
+    width: 100%;
+    height: 100%;
+}
 
-.footer__cont{
+.footer__navegador ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer__navegador ul li{
+    width: 10%;
+}
+
+.footer__navegador ul li img{
     width: 100%;
 }
 
-.footer__cont img{
-    width: 9vw;
-}
+
 
