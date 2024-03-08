@@ -1,4 +1,4 @@
-@import url(menuvariables.css);
+@import url(variables.css);
 
 *{
     padding: 0;
@@ -8,8 +8,7 @@
 }
 
 body{
-    position: relative;
-    background-color: var(--color-primary);
+    background-color: var(--color-font);
     width: 100vw;
     height: 100vh;
     display: grid;
@@ -17,9 +16,9 @@ body{
     grid-template-rows: 1.5fr repeat(3, 5fr) 1.5fr;
     grid-template-areas: 
     "header"
-    "sup"
-    "med"
-    "med"
+    "main"
+    "main"
+    "main"
     "footer"
     ;
 }
@@ -27,7 +26,6 @@ body{
 header{
     grid-area: header;
     width: 100%;
-    border: 1px solid black;
     display: flex;
     align-items: center;
 }
@@ -36,40 +34,207 @@ header img{
     width: 100%;
 }
 
-.secarriba{
-    grid-area: sup;
-    width: 100%;
+.main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas: 
+    "investing"
+    "banner"
+    "banner"
+    "cards"
+    "colection"
+    "colection"
+    "colection"
+    "colection"
+    "colection"
+    ;
+    grid-gap: 10px;
+    padding: 0 4.8vw;
 }
 
-.secarriba > p{
+.main__title{
+    grid-area: investing;
+    text-transform: capitalize;
+    font-size: 6vw;
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+}
+
+.main__banner{
+    grid-area: banner;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner__public{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    border-radius: 3vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.125);
+    padding: 4vw 0;
+}
+
+.public__logo{
+    margin-right: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.public__logo div{
+    background-color: red;
+}
+
+.public__logo img{
+    width: 35vw;
+}
+
+.public__description{
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 5vw;
+    margin-left: 3vw;
+}
+
+.public__description div, .public__description p, .public__description small, .public__description button{
+    margin: .8vw 0;
+}
+
+.public__description p, .public__description small, .public__description button{
+    margin: .8vw 0;
+    margin-right: 5vw;
+}
+
+.public__description small{
+    display: block;
+    color: var(--color-ternary);
+}
+
+.public__description button{
+    border: 0;
+    color: var(--color-font);
+    background-color: var(--color-secundary);
+    padding: 2vw 6vw;
+    font-size: 3vw;
+    text-transform: uppercase;
+    border-radius: 10vw;
+}
+
+.description__close{
+    width: 100%;
+    text-align: right;
+    color: var(--color-secundary);
+}
+
+.description__close i{
+    margin-right: 2vw;
+}
+
+.main__title2{
+    grid-area: cards;
+}
+
+.main__cards{
+    grid-area: colection;
+}
+
+.main__title2{
+    text-transform: capitalize;
+    color: var(--color-primary);
+    font-size: 6vw;
+    display: flex;
+    align-items: center;
+}
+
+.main__cards{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+.cards__1{
+    height: 90%;
+    min-width: 70%;
+    margin-right: 4vw;
+    width: 70%;
+    background-color: var(--color-primary);
+    color: var(--color-font);
+    border-radius: 3vw;
+}
+
+.c1__sup{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6vw;
+    height: 20%;
+    font-size: 4vw;
+}
+
+.c1__sup img{
+    width: 6vw;
+}
+
+.c1__med{
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 6vw;
     font-weight: 900;
 }
 
-.secarriba__pig{
-    width: 100%;
-    border: 1px solid black;
+.c1__baj{
     display: flex;
-}
-
-.nack{
-    display: flex;
+    height: 20%;
     align-items: center;
-    justify-content: center;
-    width: 39vw;
-    height: 39vw;
-    background-color: var(--color-pig);
-    border-radius: 0 60% 50% 0;
+    padding: 6vw;
 }
 
-.pig__izquierda{
-    width: 40%;
-    border: 1px solid green;
-    overflow: hidden;
+.c1__baj img{
+    width: 10vw;
 }
 
-.pig__izquierda img{
-    width: 80%;
-    
+.footer{
+    grid-area: footer;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    background-color: var(--color-primary);
+    z-index: 1;
 }
 
+.footer__navegador{
+    width: 100%;
+    height: 100%;
+}
+
+.footer__navegador ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer__navegador ul li{
+    width: 10%;
+}
+
+.footer__navegador ul li a{
+    width: 100%;
+    color: var(--color-font);
+    font-size: 7vw;
+}
+
+.footer__navegador ul li a:hover{
+    color: var(--color-secundary);
+}
