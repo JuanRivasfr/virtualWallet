@@ -1,5 +1,7 @@
 :root{
-    --color-primary: #FFFFFF;
-    --color-pig: #E1FFEF;
-
+    --color-primary:  #213435;
+    --color-pig: #46685b;
+    --color-secundary: #648a64;
+    --color-ternary: #a6b985;
+    --color-five: #e1e3ac;
 }
